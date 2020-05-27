@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Job Form</h1>
+<!--Give the option to add a new data in the table -->
+<a href ="/add"> Add a job</a></br>
+
+<!--loop though in enhanced for loop-->
+<div th:each="job: ${jobs} ">
+    <h4 th:inline="text">[[${job.title}]] @  [[${job.employer}]]</h4>
+     <p th:text="${job.description}"></p>
+</div>
+
+</body>
+</html>
